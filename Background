@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illuminati Images</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            margin: 20px;
+            width: 300px;
+            height: auto;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Illuminati Images</h1>
+    <img id="illuminatiImage" src="https://via.placeholder.com/300" alt="Illuminati">
+    <br>
+    <button onclick="showRandomImage()">Show Random Image</button>
+
+    <script>
+        const images = [
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Eye_of_Providence.svg/1200px-Eye_of_Providence.svg.png',
+            'https://www.publicdomainpictures.net/pictures/290000/nahled/illuminati-pyramid.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/MasonicEye.jpg/800px-MasonicEye.jpg',
+            'https://cdn.pixabay.com/photo/2015/04/21/09/24/eye-732227_1280.jpg'
+        ];
+
+        function showRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            document.getElementById('illuminatiImage').src = images[randomIndex];
+        }
+    </script>
+</body>
+</html>
